@@ -60,7 +60,7 @@ function Home() {
                     ...fadeInStyle,
                     transition: `opacity 1s ease ${getRandomDelay()}s`
                 }}>
-                    Hello, My name is
+                    This is a Vercel
                 </h2>
                 <h1 style={{
                     ...h1Style,
@@ -68,7 +68,7 @@ function Home() {
                     transition: `opacity 1s ease ${getRandomDelay()}s`
                 }}
                 >
-                    Yuri Samuel.
+                    Test.
                 </h1>
                 <h2 style={{
                     ...h2Style,
