@@ -1,0 +1,23 @@
+service: contact-service
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    SMTP_HOST: ${env:SMTP_HOST}
+    SMTP_USER: ${env:SMTP_USER}
+    SMTP_PASS: ${env:SMTP_PASS}
+
+functions:
+  sendContactForm:
+    handler: handler.sendContactForm
+    events:
+      - http:
+          path: contact
+          method: post
+          cors: true
+    package:
+      include:
+        - node_modules/nodemailer/**
